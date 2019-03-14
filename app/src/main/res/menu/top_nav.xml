@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_noodle"
+        android:icon="@drawable/noodles"
+        android:title="Ramen"
+        android:iconTint="@color/colorTop"/>
+    <item
+        android:id="@+id/nav_beverage"
+        android:icon="@drawable/beverages"
+        android:title="Beverage"
+        android:iconTint="@color/colorTop"/>
+    <item
+        android:id="@+id/nav_toping"
+        android:icon="@drawable/toping"
+        android:title="Topping"
+        android:iconTint="@color/colorTop"/>
+    <item
+        android:id="@+id/nav_cari"
+        android:icon="@drawable/search"
+        android:title="Cari"
+        android:iconTint="@color/colorTop"/>
+
+</menu>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_beranda"
+        android:title="@string/title_home"
+        android:iconTint="@color/colorWhite"
+        />
+
+    <item
+        android:id="@+id/navigation_rekomen"
+        android:icon="@drawable/ic_rekomen"
+        android:title="@string/title_rekomen"
+        android:iconTint="@color/colorWhite"/>
+
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="@string/title_cart"
+        android:iconTint="@color/colorWhite"/>
+
+    <item
+        android:id="@+id/navigation_akun"
+        android:icon="@drawable/ic_akun"
+        android:title="@string/title_akun"
+        android:iconTint="@color/colorWhite"/>
+
+</menu>
