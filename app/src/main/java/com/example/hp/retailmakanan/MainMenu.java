@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class MainMenu extends AppCompatActivity{
 
-    BottomNavigationView top_navigation;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -23,19 +22,15 @@ public class MainMenu extends AppCompatActivity{
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     sfragment = new FragHome();
-                    top_navigation.setVisibility(View.VISIBLE);
                     break;
                 case R.id.navigation_rekomen:
                     sfragment = new FragRekomen();
-                    top_navigation.setVisibility(View.GONE);
                     break;
                 case R.id.navigation_cart:
                     sfragment = new FragCart();
-                    top_navigation.setVisibility(View.GONE);
                     break;
                 case R.id.navigation_akun:
                     sfragment = new FragAkun();
-                    top_navigation.setVisibility(View.GONE);
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.frag_contain, sfragment).commit();
@@ -48,7 +43,6 @@ public class MainMenu extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        top_navigation = (BottomNavigationView) findViewById(R.id.top_nav);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_contain, new FragHome()).commit();
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#F3F3F3</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark">#333333</color>
     <color name="colorYellow">#ffee06</color>
     <color name="colorAccent1">#ffd000</color>
     <color name="colorAccent">#F3F3F3</color>
@@ -10,4 +10,6 @@
     <color name="colorBackground">#E5E5E5</color>
     <color name="colorTop">#999999</color>
     <color name="colorInput">#F3F3F3</color>
+    <color name="colorRegInput">#94090D</color>
+    <color name="colorPlus">#CCCCCC</color>
 </resources>

@@ -13,7 +13,7 @@
         android:id="@+id/navigation_rekomen"
         android:icon="@drawable/ic_rekomen"
         android:title="@string/title_rekomen"
-        android:iconTint="@color/colorWhite"/>
+        android:iconTint="@color/colorWhite" />
 
     <item
         android:id="@+id/navigation_cart"
