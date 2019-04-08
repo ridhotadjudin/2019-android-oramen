@@ -16,7 +16,7 @@ public class RegAct extends AppCompatActivity {
         btn_regist = (Button) findViewById(R.id.btn_daftar);
         btn_cancel = (Button) findViewById(R.id.btn_batal);
 
-        btn_regist.setOnClickListener(new View.OnClickListener() {
+       btn_regist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toMain();

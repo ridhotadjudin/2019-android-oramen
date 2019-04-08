@@ -5,227 +5,198 @@
     android:layout_height="match_parent"
     android:background="@color/colorNav">
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/LinLay_reg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="39dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentEnd="true">
 
-        <LinearLayout
-            android:id="@+id/LinLay_reg"
-            android:layout_width="match_parent"
-            android:layout_height="39dp"
-            android:layout_marginTop="20dp"
-            android:layout_alignParentEnd="true">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Register"
-                android:textAlignment="center"
-                android:textColor="@color/colorWhite"
-                android:textSize="28dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/LinLay_uname"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/LinLay_reg"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
+            android:text="Registrasi"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/LinLay_reg"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lay_reg_uname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/colorRegInput">
 
             <EditText
-                android:id="@+id/txtreg_username"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:background="@color/colorRegInput"
                 android:hint="Username"
+                android:textColor="@color/colorYellow"
+                android:textColorHint="@color/colorYellow"
+                android:layout_gravity="center"
                 android:textSize="10sp"
-                android:paddingStart="10dp"
-                android:textColor="@color/colorYellow"
-                android:textColorHint="@color/colorYellow"
-                android:background="@color/colorRegInput"/>
+                android:layout_marginStart="8dp"
+                />
 
             <ImageView
-                android:id="@+id/reg_name"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_akunname"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="10dp"/>
+                android:id="@+id/img_reg_akun"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_akunname"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/LinLay_email"
+            android:id="@+id/lay_reg_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/LinLay_uname"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:background="@color/colorRegInput">
+            android:background="@color/colorRegInput"
+            android:layout_marginTop="15dp"
+            >
 
             <EditText
-                android:id="@+id/txtreg_email"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:background="@color/colorRegInput"
                 android:hint="Email"
-                android:textSize="6pt"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
                 android:textColor="@color/colorYellow"
-                android:textColorHint="@color/colorYellow"/>
+                android:textColorHint="@color/colorYellow"
+                android:layout_gravity="center"
+                android:textSize="10sp"
+                android:layout_marginStart="8dp"
+                />
 
             <ImageView
-                android:id="@+id/reg_email"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_email"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"/>
+                android:id="@+id/img_reg_email"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_email"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/LinLay_pass"
+            android:id="@+id/lay_reg_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/LinLay_email"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:background="@color/colorRegInput">
+            android:background="@color/colorRegInput"
+            android:layout_marginTop="10dp"
+            >
 
             <EditText
-                android:id="@+id/txtreg_pass"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:background="@color/colorRegInput"
                 android:hint="Password"
-                android:textSize="6pt"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
                 android:textColor="@color/colorYellow"
                 android:textColorHint="@color/colorYellow"
+                android:layout_gravity="center"
+                android:textSize="10sp"
+                android:layout_marginStart="8dp"
                 />
 
             <ImageView
-                android:id="@+id/reg_pass"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_pass"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"/>
+                android:id="@+id/img_reg_pass"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_pass"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/LinLay_telp"
+            android:id="@+id/lay_reg_telp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/LinLay_pass"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:background="@color/colorRegInput">
+            android:background="@color/colorRegInput"
+            android:layout_marginTop="10dp"
+            >
 
             <EditText
-                android:id="@+id/txtreg_telp"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:background="@color/colorRegInput"
                 android:hint="No Telp"
-                android:textSize="6pt"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
                 android:textColor="@color/colorYellow"
                 android:textColorHint="@color/colorYellow"
+                android:layout_gravity="center"
+                android:textSize="10sp"
+                android:layout_marginStart="8dp"
                 />
 
             <ImageView
-                android:id="@+id/reg_telp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/ic_telp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"/>
+                android:id="@+id/img_reg_telp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_telp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/LinLay_add"
+            android:id="@+id/lay_reg_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/LinLay_telp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:background="@color/colorRegInput">
+            android:background="@color/colorRegInput"
+            android:layout_marginTop="10dp"
+            >
 
             <EditText
-                android:id="@+id/txtreg_add"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:background="@color/colorRegInput"
                 android:hint="Alamat"
-                android:textSize="6pt"
-                android:paddingStart="10dp"
-                android:paddingTop="5dp"
                 android:textColor="@color/colorYellow"
                 android:textColorHint="@color/colorYellow"
+                android:gravity="top"
+                android:textSize="10sp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="8dp"
                 />
+
+
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/daftar"
+        <CheckBox
+            android:id="@+id/checkBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/LinLay_add"
-            android:layout_marginTop="30dp">
-            <Button
-                android:id="@+id/btn_daftar"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@+id/LinLay_add"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="40dp"
-                android:background="@color/colorYellow"
-                android:text="Daftar"
-                android:textColor="@color/colorNav" />
-        </LinearLayout>
+            android:text="Saya setuju dengan syarat dan ketentuan yang berlaku"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp" />
 
-        <LinearLayout
-            android:id="@+id/batal"
+        <Button
+            android:id="@+id/btn_daftar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/daftar"
-            android:layout_marginTop="30dp">
-            <Button
-                android:id="@+id/btn_batal"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@+id/LinLay_add"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="40dp"
-                android:background="@color/colorYellow"
-                android:text="Batal"
-                android:textColor="@color/colorNav" />
-        </LinearLayout>
+            android:layout_height="40dp"
+            android:text="Daftar"
+            android:textColor="@color/colorNav"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorYellow"/>
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/btn_batal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Batal"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorNav"/>
 
+    </LinearLayout>
 
 
 

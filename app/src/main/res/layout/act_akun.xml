@@ -22,7 +22,7 @@
         android:id="@+id/ic_akun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         >
         <ImageView
             android:layout_width="match_parent"
@@ -77,18 +77,45 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_edit_akun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_alamat_akun"
+        android:gravity="center"
+        android:layout_margin="5dp">
+        <Button
+            android:gravity="center"
+            android:id="@+id/btn_edit_akun"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="Edit"
+            android:textSize="8sp"
+            android:background="@color/colorWhite"
+            android:textColor=""/>
+
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/txt_rect_akun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/txt_alamat_akun"
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:src="@drawable/rectangle"
-            />
+        android:layout_below="@+id/lay_edit_akun"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+       android:layout_margin="10dp"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="350dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="180dp"
+            android:layout_alignTop="@+id/txt_rect_akun"
+            android:src="@drawable/rectangle">
+
+        </android.support.v7.widget.CardView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -106,61 +133,77 @@
             android:layout_marginEnd="40dp"
             android:background="@color/colorYellow"
             android:text="Logout"
-            android:textColor="@color/colorNav" />
+            android:textColor="@color/colorNav"
+            />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/txt_sett_akun"
+        android:id="@+id/lay_sett_akun"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/txt_rect_akun"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="24dp">
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:gravity="center">
         <TextView
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="70dp"
+            android:layout_width="230dp"
+            android:layout_height="20dp"
             android:text="Setting"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
             />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/arrowakun"/>
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:background="@drawable/arrowakun"/>
     </LinearLayout>
+
     <LinearLayout
-        android:id="@+id/txt_about_akun"
+        android:id="@+id/lay_akun_about"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_below="@+id/txt_sett_akun">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_below="@+id/lay_sett_akun">
+
         <TextView
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="70dp"
-            android:text="About"/>
-        <ImageView
-            android:layout_width="20dp"
+            android:layout_width="230dp"
             android:layout_height="20dp"
-            android:src="@drawable/arrowakun"/>
+            android:layout_gravity="center"
+            android:text="About"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:background="@drawable/arrowakun"/>
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/lay_akun_FAQ"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="24dp"
-        android:layout_below="@+id/txt_about_akun">
+        android:gravity="center"
+        android:layout_below="@id/lay_akun_about">
         <TextView
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="70dp"
-            android:text="About"/>
-        <ImageView
-            android:layout_width="20dp"
+            android:layout_width="230dp"
             android:layout_height="20dp"
-            android:src="@drawable/arrowakun"/>
+            android:text="FAQ"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:background="@drawable/arrowakun"/>
     </LinearLayout>
+
 </RelativeLayout>
