@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <Toolbar
+        android:id="@+id/lay_tol_edt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite">
+
+        <Button
+            android:id="@+id/btn_back_check"
+            android:layout_width="15dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/btn_back_check"
+            android:gravity="center"
+            android:text="Edit Akun"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_tol_edt"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:id="@+id/lin_foto_akun">
+        <ImageView
+            android:id="@+id/foto_akun"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_edit_foto"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit_photo"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_foto_akun"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:id="@+id/lin_input">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"
+                android:hint="Username"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorTop"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_edt_akun"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"
+                android:hint="Email"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorTop"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_edit_email"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"
+                android:hint="Password"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorTop"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_edit_pass"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"
+                android:hint="No Telp"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorTop"/>
+            <ImageView
+                android:layout_margin="8dp"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_edit_telp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorWhite"
+                android:hint="Username"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorTop"
+                android:gravity="top"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_input"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:background="@color/colorNav"
+            android:text="Simpan"
+            android:textAllCaps="false"
+            android:textColor="@color/colorYellow"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:text="Batal"
+            android:textAllCaps="false"
+            android:background="@color/colorTop"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

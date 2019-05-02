@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="280dp"
             android:src="@drawable/header"
             android:scaleType="fitXY"
             />
@@ -22,7 +22,7 @@
         android:id="@+id/ic_akun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         >
         <ImageView
             android:layout_width="match_parent"
@@ -42,14 +42,14 @@
             android:text="Username"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="15sp"
             android:textAlignment="center"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/txt_email_akun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_below="@+id/txt_uname_akun"
         >
         <TextView
@@ -57,14 +57,14 @@
             android:layout_height="wrap_content"
             android:text="abc@email.com"
             android:textColor="@color/colorWhite"
-            android:textSize="15dp"
+            android:textSize="10sp"
             android:textAlignment="center"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/txt_alamat_akun"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_below="@+id/txt_email_akun"
         >
         <TextView
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             android:textColor="@color/colorWhite"
-            android:textSize="15dp"
+            android:textSize="10sp"
             android:textAlignment="center"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"/>
@@ -92,8 +92,8 @@
             android:layout_height="30dp"
             android:text="Edit"
             android:textSize="8sp"
-            android:background="@color/colorWhite"
-            android:textColor=""/>
+            android:background="@drawable/ic_btn_edit"
+            android:textColor="@color/colorWhite"/>
 
     </LinearLayout>
 
@@ -108,9 +108,9 @@
         android:gravity="center">
 
         <android.support.v7.widget.CardView
-            android:layout_width="350dp"
-            app:cardCornerRadius="10dp"
-            android:layout_height="180dp"
+            android:layout_width="300dp"
+            app:cardCornerRadius="12dp"
+            android:layout_height="150dp"
             android:layout_alignTop="@+id/txt_rect_akun"
             android:src="@drawable/rectangle">
 
@@ -123,16 +123,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_rect_akun"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="50dp">
 
         <Button
             android:id="@+id/btn_logout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:background="@color/colorYellow"
+            android:background="@drawable/borderbutton"
             android:text="Logout"
+            android:textSize="12sp"
+            android:textAllCaps="false"
             android:textColor="@color/colorNav"
             />
     </LinearLayout>
@@ -150,11 +152,12 @@
             android:layout_width="230dp"
             android:layout_height="20dp"
             android:text="Setting"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:layout_gravity="center"
             android:textColor="@color/colorPrimaryDark"
             />
         <Button
+            android:id="@+id/btn_setting"
             android:layout_width="10dp"
             android:layout_height="18dp"
             android:background="@drawable/arrowakun"/>
@@ -174,9 +177,9 @@
             android:layout_width="230dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
-            android:text="About"
+            android:text="History"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="15sp" />
+            android:textSize="12sp" />
         <Button
             android:layout_width="10dp"
             android:layout_height="18dp"
@@ -195,8 +198,8 @@
         <TextView
             android:layout_width="230dp"
             android:layout_height="20dp"
-            android:text="FAQ"
-            android:textSize="15sp"
+            android:text="About"
+            android:textSize="12sp"
             android:layout_gravity="center"
             android:textColor="@color/colorPrimaryDark"
             />

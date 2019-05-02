@@ -37,7 +37,7 @@ public class RegAct extends AppCompatActivity {
     }
 
     private void toLog(){
-        Intent intent = new Intent(this, LogAct.class);
+        Intent intent = new Intent(this , LogAct.class);
         startActivity(intent);
     }
 }

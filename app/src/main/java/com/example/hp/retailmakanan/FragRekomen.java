@@ -12,22 +12,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FragRekomen extends Fragment {
-    ViewPager viewPager;
-    ArgbEvaluator argbEvaluator = new ArgbEvaluator();
-    List<RekomenModel> list;
+    RecyclerView recyclerView1, recyclerView2;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.act_rekomen, container, false);
-        RekomenAdapter adapter = new RekomenAdapter();
-        viewPager = (ViewPager) v.findViewById(R.id.pager);
-        viewPager.setAdapter(adapter);
-        return v;
+        recyclerView1 = (RecyclerView) v.findViewById(R.id.recv_rek_ramen);
+        recyclerView2 = (RecyclerView) v.findViewById(R.id.recv_rek_minum);
+        RekomenAdapterMinum rekM = new RekomenAdapterMinum();
+        RekomenAdapterRamen rekR = new RekomenAdapterRamen();
+        recyclerView1.setAdapter(rekR);
+        recyclerView2.setAdapter(rekM);
+        LinearLayoutManager lay1 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager lay2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerView1.setLayoutManager(lay1);
+        recyclerView2.setLayoutManager(lay2);
+    return v;
     }
 }

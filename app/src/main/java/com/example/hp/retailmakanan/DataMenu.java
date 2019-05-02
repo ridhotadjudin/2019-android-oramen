@@ -17,11 +17,11 @@ public class DataMenu {
             "Deskripsi"
     };
     public static String[] harga = new String[]{
-            "Rp. 25000",
-            "Rp. 25000",
-            "Rp. 25000",
-            "Rp. 25000",
-            "Rp. 25000"
+            "25000",
+            "25000",
+            "25000",
+            "25000",
+            "25000"
     };
     public static int[] picture = new int[]{
             R.drawable.ramen,

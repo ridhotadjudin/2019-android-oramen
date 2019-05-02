@@ -11,15 +11,32 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class FragHome extends Fragment {
     RecyclerView recV;
     BottomNavigationView top_navigation;
+    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener
         = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            Fragment sfragment = null;
+            switch (menuItem.getItemId()) {
+                case R.id.nav_noodle:
+                    mTextMessage.setText(R.string.title_home);
+                    break;
+                case R.id.nav_beverage:
+                    mTextMessage.setText(R.string.title_home);
+                    break;
+                case R.id.nav_toping:
+                    mTextMessage.setText(R.string.title_home);
+                    break;
+                case R.id.nav_cari:
+                    mTextMessage.setText(R.string.title_home);
+                    break;
+            }
             return false;
         }
     };
@@ -31,7 +48,7 @@ public class FragHome extends Fragment {
         recV = (RecyclerView) v.findViewById(R.id.rec_ramen);
         HomeAdapter listAdapter = new HomeAdapter();
         recV.setAdapter(listAdapter);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recV.setLayoutManager(layoutManager);
         top_navigation = (BottomNavigationView) v.findViewById(R.id.top_nav);
         top_navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
