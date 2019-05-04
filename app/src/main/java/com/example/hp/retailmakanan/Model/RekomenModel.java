@@ -1,4 +1,4 @@
-package com.example.hp.retailmakanan;
+package com.example.hp.retailmakanan.Model;
 
 public class RekomenModel {
     private int image;
