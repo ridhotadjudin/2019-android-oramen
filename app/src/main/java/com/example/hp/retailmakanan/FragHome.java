@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -34,6 +35,7 @@ public class FragHome extends Fragment {
     BottomNavigationView top_navigation;
     HomeAdapter listAdapter;
     List<MenuModel>  listMenu= new ArrayList<>();
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener
         = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -64,12 +66,12 @@ public class FragHome extends Fragment {
         View v =  inflater.inflate(R.layout.act_home, container, false);
         recV = (RecyclerView) v.findViewById(R.id.rec_ramen);
         getData();
-        recV.setAdapter(listAdapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recV.setLayoutManager(layoutManager);
+        listAdapter = new HomeAdapter(listMenu, getActivity());
+        recV.setAdapter(listAdapter);
         top_navigation = (BottomNavigationView) v.findViewById(R.id.top_nav);
         top_navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
-
         return v;
 
     }
@@ -88,17 +90,17 @@ public class FragHome extends Fragment {
                         String nama_menu = jsonObject.getString("nama_menu");
                         String deskripsi = jsonObject.getString("deskripsi");
                         int harga = jsonObject.getInt("harga");
-                        String image = jsonObject.getString("gambar");
 
-                        MenuModel menus = new MenuModel(id_menu,nama_menu,deskripsi,image,harga);
+                        MenuModel menus = new MenuModel(id_menu,nama_menu,deskripsi,harga);
                         listMenu.add(menus);
+                        System.out.println(menus);
                         //Toast.makeText(this,"Download data "+i,Toast.LENGTH_SHORT).show();
-                        listAdapter.notifyDataSetChanged();
+
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Log.d("anggota",e.toString());
+                        Log.d("menu",e.toString());
                     }
-
+                    listAdapter.notifyDataSetChanged();
 
                 }
 

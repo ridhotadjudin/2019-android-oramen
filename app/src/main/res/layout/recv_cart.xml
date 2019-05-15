@@ -36,17 +36,32 @@
             android:src="@drawable/ramen"
             android:layout_marginTop="8dp"/>
 
-        <TextView
-            android:id="@+id/txt_cart_harga"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="33dp"
-            android:text="Rp. 28000"
-            android:textColor="@color/colorTop"
-            android:textSize="12sp"/>
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="Rp."
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_cart_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="28000"
+                android:textColor="@color/colorTop"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
 
         <Button
             android:id="@+id/btn_cart_min"

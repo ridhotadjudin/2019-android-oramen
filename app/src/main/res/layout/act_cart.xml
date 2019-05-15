@@ -84,6 +84,7 @@
                 android:textStyle="bold"/>
 
             <Button
+                android:id="@+id/btn_bayar"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:background="@color/colorNav"

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +30,9 @@ public class CartAdapter extends RecyclerView.Adapter {
     private class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView txtM,txtSub,txtTot;
         private ImageView img;
+        Button btnMincart, btnPluscart, btnDelete;
+        TextView txtQty;
+        int x;
 
         public ListViewHolder(View view){
             super(view);
@@ -36,12 +40,42 @@ public class CartAdapter extends RecyclerView.Adapter {
             txtSub = (TextView) view.findViewById(R.id.txt_cart_harga);
             txtTot = (TextView) view.findViewById(R.id.txt_cart_total);
             img = (ImageView) view.findViewById(R.id.imgv_cart);
+            btnMincart = view.findViewById(R.id.btn_cart_min);
+            btnPluscart = view.findViewById(R.id.btn_cart_plus);
+            btnDelete = view.findViewById(R.id.btn_cart_delete);
+            txtQty = view.findViewById(R.id.txt_cart_qty);
         }
 
         public void bindView (int pos){
+            x=0;
             txtM.setText(DataMenu.title[pos]);
             txtSub.setText(DataMenu.harga[pos]);
             img.setImageResource(DataMenu.picture[pos]);
+
+
+            txtQty.setText(String.valueOf(x));
+            btnPluscart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    x++;
+                    txtQty.setText(String.valueOf(x));
+                }
+            });
+
+            btnMincart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    x--;
+                    if(x<=0){
+                        x=0;
+                        txtQty.setText(String.valueOf(x));
+                    }else if(x>0){
+                        txtQty.setText(String.valueOf(x));
+                    }
+                }
+            });
+
+
         }
 
         @Override
