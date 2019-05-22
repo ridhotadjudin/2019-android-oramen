@@ -5,10 +5,26 @@ public class MenuModel {
     private String id_menu, nama_menu, deskripsi,imgUrl;
     private int harga;
 
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
     public MenuModel(String id_menu, String nama_menu, String deskripsi, int harga) {
         this.id_menu = id_menu;
         this.nama_menu = nama_menu;
         this.deskripsi = deskripsi;
+        this.harga = harga;
+    }
+
+    public MenuModel(String id_menu, String nama_menu, String deskripsi, String imgUrl, int harga) {
+        this.id_menu = id_menu;
+        this.nama_menu = nama_menu;
+        this.deskripsi = deskripsi;
+        this.imgUrl = imgUrl;
         this.harga = harga;
     }
 

@@ -21,6 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.hp.retailmakanan.Model.MenuModel;
+import com.example.hp.retailmakanan.Model.RamenModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,29 +38,6 @@ public class FragHome extends Fragment {
     List<MenuModel>  listMenu= new ArrayList<>();
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener
-        = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment sfragment = null;
-            switch (menuItem.getItemId()) {
-                case R.id.nav_noodle:
-                    recV.setAdapter(listAdapter);
-                    break;
-                case R.id.nav_beverage:
-                    recV.setAdapter(listAdapter);
-                    break;
-                case R.id.nav_toping:
-                    recV.setAdapter(listAdapter);
-                    break;
-                case R.id.nav_cari:
-                    recV.setAdapter(listAdapter);
-                    break;
-            }
-            return false;
-        }
-    };
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -70,8 +48,8 @@ public class FragHome extends Fragment {
         recV.setLayoutManager(layoutManager);
         listAdapter = new HomeAdapter(listMenu, getActivity());
         recV.setAdapter(listAdapter);
-        top_navigation = (BottomNavigationView) v.findViewById(R.id.top_nav);
-        top_navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
+        //top_navigation = (BottomNavigationView) v.findViewById(R.id.top_nav);
+        //top_navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
         return v;
 
     }
@@ -89,9 +67,9 @@ public class FragHome extends Fragment {
                         String id_menu = jsonObject.getString("id");
                         String nama_menu = jsonObject.getString("nama_menu");
                         String deskripsi = jsonObject.getString("deskripsi");
-                        int harga = jsonObject.getInt("harga");
-
-                        MenuModel menus = new MenuModel(id_menu,nama_menu,deskripsi,harga);
+                        int harga = jsonObject.getInt("harga_menu");
+                        String img_url = jsonObject.getString("ImageUrl");
+                        MenuModel menus = new MenuModel(id_menu,nama_menu,deskripsi,img_url, harga);
                         listMenu.add(menus);
                         System.out.println(menus);
                         //Toast.makeText(this,"Download data "+i,Toast.LENGTH_SHORT).show();

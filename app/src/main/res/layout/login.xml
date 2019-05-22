@@ -47,7 +47,7 @@
         app:srcCompat="@drawable/rectangle" />
 
     <EditText
-        android:id="@+id/textInputLayout"
+        android:id="@+id/textLoginEmail"
         android:layout_width="315dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
@@ -55,7 +55,7 @@
         android:layout_marginBottom="150dp"
         android:paddingStart="8dp"
         android:textSize="10sp"
-        android:hint="Username"
+        android:hint="Email"
         android:background="@color/colorPrimary"
         android:textColorHint="@color/colorTop"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -65,7 +65,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextPwd"
         android:paddingStart="8dp"
         android:layout_width="315dp"
         android:layout_height="41dp"
@@ -101,7 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPwd"
         app:layout_constraintVertical_bias="0.033" />
 
     <TextView

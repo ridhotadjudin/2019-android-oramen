@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class FragAkun extends Fragment {
 
-    Button btnSetting;
+    Button btnSetting, btnLogout;
 
     @Nullable
     @Override
@@ -20,6 +20,7 @@ public class FragAkun extends Fragment {
         View v =  inflater.inflate(R.layout.act_akun, container, false);
 
         btnSetting = (Button) v.findViewById(R.id.btn_setting);
+        btnLogout =  v.findViewById(R.id.btn_logout);
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,7 +28,20 @@ public class FragAkun extends Fragment {
             }
         });
 
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toLogout();
+            }
+        });
+
         return v;
+    }
+
+    private void toLogout() {
+        Intent intent = new Intent(getActivity(), LogAct.class);
+        startActivity(intent);
+
     }
 
     private void toSetting(){

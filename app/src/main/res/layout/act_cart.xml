@@ -14,13 +14,6 @@
         android:layout_height="40dp"
         android:background="@color/colorWhite">
 
-        <Button
-            android:id="@+id/btn_back_check"
-            android:layout_width="15dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/ic_back" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="20dp"

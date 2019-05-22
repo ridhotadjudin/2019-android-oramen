@@ -53,6 +53,7 @@
         android:layout_below="@+id/txt_uname_akun"
         >
         <TextView
+            android:id="@+id/txt_akun_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="abc@email.com"

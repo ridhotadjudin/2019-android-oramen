@@ -28,11 +28,11 @@ public class CartAdapter extends RecyclerView.Adapter {
     }
 
     private class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private TextView txtM,txtSub,txtTot;
+        private TextView txtM,txtSub,txtTot, txtJum;
         private ImageView img;
         Button btnMincart, btnPluscart, btnDelete;
         TextView txtQty;
-        int x;
+        int x, harga, total, jum, i;
 
         public ListViewHolder(View view){
             super(view);
@@ -44,13 +44,19 @@ public class CartAdapter extends RecyclerView.Adapter {
             btnPluscart = view.findViewById(R.id.btn_cart_plus);
             btnDelete = view.findViewById(R.id.btn_cart_delete);
             txtQty = view.findViewById(R.id.txt_cart_qty);
+            txtJum = view.findViewById(R.id.txt_harga);
         }
 
         public void bindView (int pos){
-            x=0;
+            x=3;
+            i=0;
+            jum = 0;
+            harga = Integer.parseInt(txtSub.getText().toString());
+            total = harga*x;
             txtM.setText(DataMenu.title[pos]);
-            txtSub.setText(DataMenu.harga[pos]);
+            txtTot.setText(String.valueOf(total));
             img.setImageResource(DataMenu.picture[pos]);
+            jum = jum +total;
 
 
             txtQty.setText(String.valueOf(x));
@@ -58,6 +64,8 @@ public class CartAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onClick(View v) {
                     x++;
+                    total = harga*x;
+                    txtTot.setText(String.valueOf(total));
                     txtQty.setText(String.valueOf(x));
                 }
             });
@@ -68,8 +76,12 @@ public class CartAdapter extends RecyclerView.Adapter {
                     x--;
                     if(x<=0){
                         x=0;
+                        total = harga*x;
+                        txtTot.setText(String.valueOf(total));
                         txtQty.setText(String.valueOf(x));
                     }else if(x>0){
+                        total = harga*x;
+                        txtTot.setText(String.valueOf(total));
                         txtQty.setText(String.valueOf(x));
                     }
                 }
